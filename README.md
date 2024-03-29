@@ -1,4 +1,4 @@
-# Selenium Practice Automation
+# Selenium CI/CD Tests
 
 ## Work in Progress: The development is ongoing. For updates, kindly revisit frequently.
 
@@ -13,7 +13,7 @@
 * tests are running on push events
 * test are running on schedule from Monday to Friday at 15:00 GMT (17:00 Brasov time)
 
-### An HTML report is generated after each run and the last one can be vizualized on [https://costelburuiana.github.io/portofolio/?sort=result](https://costelburuiana.github.io/portofolio/?sort=result) or older reports can be downloaded in a .zip format from [https://github.com/costelburuiana/portofolio/actions](https://github.com/costelburuiana/portofolio/actions) and select the desired workflow run to see the report in `Artifacts` section of the page. 
+### An HTML report is generated after each run and the last one can be vizualized on https://costelburuiana.github.io/selenium/?sort=result or older reports can be downloaded in a .zip format from https://github.com/costelburuiana/selenium/actions and select the desired workflow run to see the report in `Artifacts` section of the page. 
 
 ---
 
@@ -25,7 +25,7 @@ In `pytest.ini` file, the command line arguments for the tests are configured to
 * `-rA` → shows a detailed summary of all tests except those that passed.
 * `-s` → does not capture and will display outputs directly.
 * `-n 20` → running the tests in 20 parallel processes to speed up the test run
-* `--html=reports/index.html` → generates an HTML report. (name needs to be index.html for Github Pages)
+* `--html=reports/index.html` → generates an HTML report. 
 
 All the tests are running in a virtual environment (pipenv). To run the tests, please follow these steps:
 
