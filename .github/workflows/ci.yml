@@ -51,12 +51,6 @@ jobs:
         id: results
         run: echo "artifactPath=selenium/reports/" >> $GITHUB_ENV
 
-      - uses: actions/upload-artifact@v4
-        if: success() || failure()
-        with:
-          name: report_download
-          path: selenium/reports/
-      
       - name: Setup Pages
         uses: actions/configure-pages@v2
   
