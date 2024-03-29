@@ -25,7 +25,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r selenium_practice_automation/requirements.txt
+          pip install -r selenium/requirements.txt
 
       - name: Removing previous chrome instances on runner
         run: |
@@ -41,29 +41,23 @@ jobs:
 
       - name: Run tests
         run: |
-          cd selenium_practice_automation
+          cd selenium
           mkdir -p reports
           pytest
         continue-on-error: true
 
       - name: Set output
         if: success() || failure()
-        id: results
-        run: echo "artifactPath=selenium_practice_automation/reports/" >> $GITHUB_ENV
+        id: report
+        run: echo "artifactPath=selenium/reports/" >> $GITHUB_ENV
 
-      - uses: actions/upload-artifact@v4
-        if: success() || failure()
-        with:
-          name: report_download
-          path: selenium_practice_automation/reports/
-      
       - name: Setup Pages
         uses: actions/configure-pages@v2
   
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: selenium_practice_automation/reports/
+          path: selenium/reports/
 
       - name: Deploy to Github pages
         id: deploy
