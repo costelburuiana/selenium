@@ -2,8 +2,8 @@ name: Selenium Tests
 
 on:
   push: # Runs on push events
-  schedule: # Runs hourly from Monday to Friday between 8:00 and 17:00
-    - cron: '0 8-17 * * 1-5'
+  schedule: # Runs from Monday to Friday between 17:00 (UTC + 2) 
+    - cron: '0 15 * * 1-5'
 
 permissions:
   contents: read
