@@ -13,7 +13,7 @@
 * tests are running on push events
 * test are running on schedule from Monday to Friday at 15:00 GMT (17:00 Brasov time)
 
-### An HTML report is generated after each run and the last one can be vizualized on https://costelburuiana.github.io/selenium/?sort=result or older reports can be downloaded in a .zip format from https://github.com/costelburuiana/selenium/actions and select the desired workflow run to see the report in `Artifacts` section of the page. 
+### An HTML report is generated after each run and the last one can be vizualized on https://costelburuiana.github.io/selenium/?sort=result 
 
 ---
 
